@@ -1,5 +1,5 @@
 #Grab the ubuntu 16.04 image
-FROM ubuntu:bionic
+FROM ubuntu:latest
 
 # Install python and pip
 RUN apt-get update -y
