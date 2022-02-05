@@ -4,9 +4,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 # Install python and pip
 RUN apt-get update -y
-RUN apt-get install wget -y
-RUN wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
-RUN dpkg -i "google-chrome-stable_current_amd64.deb"
+RUN apt-get -y install google-chrome-stable
 RUN apt-get install -y python3-pip python3 build-essential
 RUN apt-get install -y xvfb chromium-chromedriver firefox
 
