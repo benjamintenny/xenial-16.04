@@ -1,9 +1,11 @@
 #Grab the latest alpine image
+FROM python:3.8.0
 FROM alpine:latest
 
 # Install python and pip
 #RUN apk add --no-cache --update python3 py3-pip bash
-RUN apk add --no-cache --update gcc musl-dev python3-dev py3-pip bash
+#RUN apk add --no-cache --update gcc musl-dev python3-dev py3-pip bash
+RUN apk add --no-cache --update py3-pip bash
 ADD ./webapp/requirements.txt /tmp/requirements.txt
 
 # Install dependencies
