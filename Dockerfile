@@ -1,8 +1,9 @@
 #Grab the ubuntu 16.04 image
-FROM ubuntu:xenial
+FROM ubuntu:bionic
 
 # Install python and pip
-#RUN apt-get install python3 python3-pip
+RUN apt-get install python3
+#python3-pip
 ADD ./webapp/requirements.txt /tmp/requirements.txt
 
 # Install dependencies
