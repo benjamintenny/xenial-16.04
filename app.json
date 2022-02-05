@@ -1,3 +1,10 @@
 {
+  "name": "alpinehelloworld ",
+  "description": "deploy alpine to Heroku.",
+  "keywords": ["alpine","Docker"],
+  "env": {
+  },
+  "website": "https://github.com/benjamintenny",
+  "repository": "https://github.com/benjamintenny",
   "stack": "container"
 }
