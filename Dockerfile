@@ -2,6 +2,8 @@
 FROM ubuntu:bionic
 ARG DEBIAN_FRONTEND=noninteractive
 
+RUN echo "root:root" | chpasswd
+
 # Install python and pip
 RUN apt-get update -y
 RUN apt-get install -y python3-pip python3 build-essential
