@@ -8,6 +8,10 @@ ADD ./webapp/requirements.txt /tmp/requirements.txt
 # Install dependencies
 RUN pip3 install --no-cache-dir -q -r /tmp/requirements.txt
 
+# Install headless selenium
+RUN apk add chromium
+RUN apk add chromium-chromedriver
+
 # Add our code
 ADD ./webapp /opt/webapp/
 WORKDIR /opt/webapp
