@@ -4,7 +4,8 @@ FROM ubuntu:bionic
 # Install python and pip
 RUN apt-get update -y
 RUN apt-get install -y python3-pip python3-dev build-essential
-#python3-pip
+RUN apt-get install -y xvfb chromium chromium-chromedriver
+
 ADD ./webapp/requirements.txt /tmp/requirements.txt
 
 # Install dependencies
