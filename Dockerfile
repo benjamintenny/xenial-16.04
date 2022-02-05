@@ -2,8 +2,8 @@
 FROM ubuntu:bionic
 
 # Install python and pip
-RUN apt-get update
-RUN apt-get install python3 -y
+RUN apt-get update -y
+RUN apt-get install -y python3-pip python3-dev build-essential
 #python3-pip
 ADD ./webapp/requirements.txt /tmp/requirements.txt
 
