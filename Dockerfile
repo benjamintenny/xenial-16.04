@@ -2,7 +2,7 @@
 FROM ubuntu:xenial
 
 # Install python and pip
-RUN sudo apt-get install python3 python3-pip
+RUN apt-get install python3 python3-pip
 ADD ./webapp/requirements.txt /tmp/requirements.txt
 
 # Install dependencies
