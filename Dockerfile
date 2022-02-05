@@ -6,14 +6,17 @@ RUN apt-get update -y
 RUN apt-get install -y python3-pip python3-dev build-essential
 RUN apt-get install -y xvfb chromium-chromedriver
 
+ENV TZ=Europe/Moscow
+
 ADD ./webapp/requirements.txt /tmp/requirements.txt
 
 # Install dependencies
-#RUN pip3 install --no-cache-dir -q -r /tmp/requirements.txt
+RUN pip3 install --no-cache-dir -q -r /tmp/requirements.txt
 
 # Add our code
 ADD ./webapp /opt/webapp/
 WORKDIR /opt/webapp
+
 
 # Expose is NOT supported by Heroku
 # EXPOSE 5000 		
