@@ -1,10 +1,8 @@
-#Grab the latest alpine image
-FROM alpine:latest
+#Grab the ubuntu 16.04 image
+FROM ubuntu:xenial
 
 # Install python and pip
-RUN apk add --no-cache libressl-dev musl-dev libffi-dev g++ && apk del libressl-dev musl-dev libffi-dev g++
-RUN apk add --no-cache --update python3-dev py3-pip bash
-#RUN apk add --no-cache --update python3 py3-pip bash
+RUN sudo apt-get install python3 python3-pip
 ADD ./webapp/requirements.txt /tmp/requirements.txt
 
 # Install dependencies
