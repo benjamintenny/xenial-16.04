@@ -8,6 +8,9 @@ ADD ./webapp/requirements.txt /tmp/requirements.txt
 # Install dependencies
 RUN pip3 install --no-cache-dir -q -r /tmp/requirements.txt
 
+# Install gcc
+RUN apk add --no-cache --virtual .build-deps gcc musl-dev && apk del .build-deps
+
 # Install headless selenium
 RUN apk add chromium
 RUN apk add chromium-chromedriver
