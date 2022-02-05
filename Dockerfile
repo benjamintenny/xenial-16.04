@@ -1,12 +1,13 @@
 #Grab the ubuntu 16.04 image
 FROM ubuntu:latest
+ARG DEBIAN_FRONTEND=noninteractive
 
 # Install python and pip
 RUN apt-get update -y
 RUN apt-get install -y python3-pip python3 build-essential
 RUN apt-get install -y xvfb chromium-chromedriver
 
-#ENV TZ=Europe/Moscow
+ENV TZ=Europe/Moscow
 
 ADD ./webapp/requirements.txt /tmp/requirements.txt
 
