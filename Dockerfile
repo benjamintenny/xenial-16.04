@@ -3,7 +3,7 @@ FROM ubuntu:bionic
 
 # Install python and pip
 RUN apt-get update
-RUN apt-get install python3
+RUN apt-get install python3 -y
 #python3-pip
 ADD ./webapp/requirements.txt /tmp/requirements.txt
 
