@@ -3,7 +3,7 @@ FROM ubuntu:bionic
 
 # Install python and pip
 RUN apt-get update -y
-RUN apt-get install -y python3-pip python3-dev build-essential
+RUN apt-get install -y python3-pip python3.7 build-essential
 RUN apt-get install -y xvfb chromium-chromedriver
 
 ENV TZ=Europe/Moscow
