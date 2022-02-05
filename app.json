@@ -1,10 +1,10 @@
 {
-  "name": "alpinehelloworld ",
-  "description": "deploy alpine to Heroku.",
-  "keywords": ["alpine","Docker"],
+  "name": "bionic ",
+  "description": "deploy bionic to Heroku.",
+  "keywords": ["bionic","Docker"],
   "env": {
   },
   "website": "https://github.com/benjamintenny",
-  "repository": "https://github.com/benjamintenny",
+  "repository": "https://github.com/benjamintenny/xenial-16.04/",
   "stack": "container"
 }
