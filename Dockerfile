@@ -17,7 +17,6 @@ RUN pip3 install --no-cache-dir -q -r /tmp/requirements.txt
 ADD ./webapp /opt/webapp/
 WORKDIR /opt/webapp
 
-RUN python3 dummy.py
 # Expose is NOT supported by Heroku
 # EXPOSE 5000 		
 
