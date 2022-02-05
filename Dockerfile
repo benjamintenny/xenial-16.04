@@ -2,11 +2,11 @@
 FROM ubuntu:xenial
 
 # Install python and pip
-RUN apt-get install python3 python3-pip
+#RUN apt-get install python3 python3-pip
 ADD ./webapp/requirements.txt /tmp/requirements.txt
 
 # Install dependencies
-RUN pip3 install --no-cache-dir -q -r /tmp/requirements.txt
+#RUN pip3 install --no-cache-dir -q -r /tmp/requirements.txt
 
 # Add our code
 ADD ./webapp /opt/webapp/
