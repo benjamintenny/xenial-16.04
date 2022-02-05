@@ -2,7 +2,9 @@
 FROM alpine:latest
 
 # Install python and pip
-RUN apk add --no-cache --update python3 py3-pip bash
+RUN apk add --no-cache libressl-dev musl-dev libffi-dev gcc && apk del libressl-dev musl-dev libffi-dev gcc
+RUN apk add --no-cache --update python3-dev py3-pip bash
+#RUN apk add --no-cache --update python3 py3-pip bash
 ADD ./webapp/requirements.txt /tmp/requirements.txt
 
 # Install dependencies
