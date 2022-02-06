@@ -4,7 +4,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 # Install python and pip
 RUN apt-get update -y
-RUN apt-get install -y python3-pip python3 build-essential
+RUN apt-get install -y python3-pip python3 build-essential xvfb chromium-chromedriver
 
 ENV TZ=Europe/Moscow
 
