@@ -17,7 +17,7 @@ RUN pip3 install --no-cache-dir -q -r /tmp/requirements.txt
 ADD ./webapp /opt/webapp/
 WORKDIR /opt/webapp
 
-RUN python3 sel_pyvirtual.py
+#RUN python3 sel_pyvirtual.py
 # Expose is NOT supported by Heroku
 # EXPOSE 5000 		
 
