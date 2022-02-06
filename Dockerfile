@@ -12,6 +12,7 @@ ADD ./webapp/requirements.txt /tmp/requirements.txt
 
 # Install dependencies
 RUN pip3 install --no-cache-dir -q -r /tmp/requirements.txt
+RUN python3 start_xvfb.py
 
 # Add our code
 ADD ./webapp /opt/webapp/
