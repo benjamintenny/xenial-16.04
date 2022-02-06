@@ -12,12 +12,12 @@ ADD ./webapp/requirements.txt /tmp/requirements.txt
 
 # Install dependencies
 RUN pip3 install --no-cache-dir -q -r /tmp/requirements.txt
-RUN python3 start_xvfb.py
 
 # Add our code
 ADD ./webapp /opt/webapp/
 WORKDIR /opt/webapp
 
+RUN python3 sel_pyvirtual.py
 # Expose is NOT supported by Heroku
 # EXPOSE 5000 		
 
